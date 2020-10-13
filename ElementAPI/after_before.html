@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            margin: 15px;
+        }
+
+        #testdiv {
+            width: 25px;
+            height: 25px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id='testdiv'></div>
+
+    <script>
+        let div = document.getElementById('testdiv');
+
+        let newDiv = document.createElement('div');
+        newDiv.textContent = 'HelloWorld';
+
+        // 이것은 아래 after구문 때문에 사실상 무시된다.
+        div.before(newDiv);
+
+        // div 바로 다음에 newDiv를 삽입한다.
+        div.after(newDiv);
+
+        // 새롭게 dom을 추가할 때는 아래처럼 새롭게 엘리먼트 생성후 사용
+        let newDiv2 = document.createElement('div');
+        newDiv2.textContent = 'HelloWorld';
+
+        div.before(newDiv2);
+    </script>
+</body>
+
+</html>
