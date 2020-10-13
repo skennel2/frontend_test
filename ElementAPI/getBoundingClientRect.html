@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #testdiv {
+            margin-left: 15px;
+            margin-top: 15px;
+            width: 25px;
+            height: 25px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id='testdiv'></div>
+
+    <script>
+        // https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
+        // The Element.getBoundingClientRect() method returns the size of an element and its position relative to the viewport.
+        // The element's size is equal to its width/height + padding + border-width in the case that 
+        // the standard box model is being used, or width/height only if box-sizing: border-box has been set on it.
+
+        let div = document.getElementById('testdiv');
+        let divRect = div.getBoundingClientRect();
+
+        // bottom: 40
+        // height: 25
+        // left: 15
+        // right: 40
+        // top: 15
+        // width: 25
+        console.log(divRect);
+    </script>
+</body>
+
+</html>
