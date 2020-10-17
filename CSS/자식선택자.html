@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            color: purple
+        }
+
+        /*
+        A B  
+        A 하위의 모든 B
+        */
+        #root .box {
+            color: red
+        }
+
+        /*
+        A>B  
+        A 하위의 모든 직계자손 B
+        */
+        #root2>.box {
+            color: blue
+        }
+    </style>
+</head>
+<body>
+    <div id='root'>
+        <div class="box">Javascript</div>
+        <div class="box">HTML</div>
+        <div class="box">
+            CSS
+            <div class="box">SCSS</div>
+        </div>
+    </div>
+    <div id="root2">
+        <div class="box">
+            Java
+            <div class="box">Spring Framework</div>
+            <div class="box">Hibernate</div>
+        </div>
+        <div class="box">C#</div>
+        <div class="box">Python</div>
+    </div>
+</body>
+</html>

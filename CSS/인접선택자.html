@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* h2와 인접해 있는 p */
+        h2 + p {
+            color: red
+        }
+        /* h2와 인접해 있는 모든 p */
+        h2 ~ p {
+            text-decoration: underline;
+        }   
+        
+    </style>
+</head>
+<body>
+    <h2>h2</h2>
+    <p>
+       h2와 인접한 p
+    </p>
+    <h2>h2</h2>
+    <p>
+        h2와 인접한 p
+    </p>
+    <p>
+        인접하지 않은 p
+    </p>
+</body>
+</html>
