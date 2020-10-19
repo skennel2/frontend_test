@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nowrap {
+            width: 100px;
+            background-color: red;
+            color: gray;
+            /* 공백을 어떻게 처리할 것인지 여부. */
+            /* nowrap은 여러개의 공백을 하나로 처리하고 영역을 넘어가면 줄을 바꾸지 않고 계속 한줄로 처리 */
+            white-space: nowrap;
+        }
+        .pre {
+            width: 100px;
+            background-color: blue;
+            color: gray;
+            /* 공백을 어떻게 처리할 것인지 여부. */
+            /* pre는 여러 개의 공백을 그대로 표시 영역을 넘어가면 줄을 바꾸지 않고 계속 한줄로 처리 */
+            white-space: pre;
+        }
+        .spacing {
+            letter-spacing: 4px;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 여러개의 스페이스를 어떻게 처리하는지, 속해있는 영역을 넘어서면 어떻게되는 지 주목 -->
+    <div class="nowrap">
+        Hello       World, Hello World, Hello World
+    </div>
+
+    <div class="pre">
+        Hello       World, Hello World, Hello World
+    </div>
+
+    <!-- letter-spacing: 글자 간의 공백을 조절한다. -->
+    <!-- word-spacing: 낱말 간의 공백을 조절한다. -->
+    <div class='spacing'>
+        Hello World, Hello World, Hello World
+    </div>    
+</body>
+</html>
